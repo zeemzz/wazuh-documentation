@@ -33,6 +33,7 @@ copyright = u'&copy; ' + str(datetime.datetime.now().year) + u' &middot; Wazuh I
 version = '3.12'
 # The full version, including alpha/beta/rc tags
 release = version
+apiURL = 'https://raw.githubusercontent.com/wazuh/wazuh/dev-aiohttp-poc/api/api/spec/spec.yaml'
 
 # -- General configuration ------------------------------------------------
 
@@ -503,6 +504,7 @@ html_context = {
     "github_repo": "wazuh-documentation",
     "conf_py_path": "/source/",
     "github_version": version,
-    "production": production
+    "production": production,
+    "apiURL": apiURL
 }
 sphinx_tabs_nowarn = True

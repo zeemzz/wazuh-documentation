@@ -107,7 +107,8 @@
   {% endif %}
 
   {% if pagename == 'user-manual/reference' %}
-    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/customredoc.css', 1) }}">
+    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/swagger-ui.css', 1) }}">
+    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/customswagger.css', 1) }}">
   {% endif %}
 </head>
 {%- endblock head %}
@@ -120,7 +121,7 @@
   {% if pagename == 'index' %}
   <div id="page" class="index">
   {% elif pagename == 'user-manual/reference' %}
-  <div id="page" class="customredoc">
+  <div id="page" class="customswagger">
   {% elif pagename == 'not_found' %}
   <div id="page" class="page-404 not-indexed">
   {% elif pagename == 'search' or pagename == 'genindex' %}
@@ -130,8 +131,6 @@
   {% endif %}
 
     {% include "header.html" %} {%- block header %}{% endblock header %}
-
-    {% if pagename != 'user-manual/reference' %}
 
     <section  class="container-fluid central-page-area">
       <div class="row">
@@ -163,7 +162,6 @@
           </div>
 
         </div>
-        {% endif %}
 
         <div id="main-content" class="order-1">
           <div id="rst-content">
@@ -182,6 +180,10 @@
           {# Main content #}
           <main>
             {% block body %} {% endblock %}
+            {% if pagename == 'user-manual/reference' %}
+              <div id="swagger-ui"></div>
+            {% endif %}
+
           </main>
 
           {% if pagename != 'index' %}
@@ -193,7 +195,22 @@
             {{copyright}}
           </footer>
           {% if pagename == 'user-manual/reference' %}
-            <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"> </script>
+            <script src="{{ pathto('_static/js/swagger-ui-bundle.js', 1) }}"> </script>
+            <script src="{{ pathto('_static/js/swagger-ui-standalone-preset.js', 1) }}"> </script>
+            <script>
+            window.onload = function() {
+              const ui = SwaggerUIBundle({
+                url: '{{ apiURL }}',
+                dom_id: '#swagger-ui',
+                presets: [
+                  SwaggerUIBundle.presets.apis,
+                  SwaggerUIStandalonePreset
+                ]
+              })
+
+              window.ui = ui
+            }
+            </script>
           {% endif %}
 
         </div>
