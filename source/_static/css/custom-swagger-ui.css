@@ -1,0 +1,63 @@
+.custom-swagger-ui #main-content .version::after {
+	content: "";
+}
+
+.custom-swagger-ui #main-content .version {
+	padding: 2px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .wrapper {
+	padding: 0;
+}
+
+.custom-swagger-ui #main-content .information-container .block {
+	padding: 0;
+}
+
+.custom-swagger-ui #main-content table {
+  margin-bottom: 0;
+	border: none;
+}
+
+.custom-swagger-ui #main-content table tr:nth-child(2n+1) {
+  background: none;
+}
+
+.custom-swagger-ui #main-content table th:not(.col_header),
+.custom-swagger-ui #main-content table td {
+	border: none;
+}
+
+.custom-swagger-ui #main-content table th.col_header {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.custom-swagger-ui #main-content table th,
+.custom-swagger-ui #main-content table td {
+	background: none;
+}
+
+.custom-swagger-ui #main-content .response code {
+	color: #008000;
+	border: none;
+	background: none;
+	font-family: sans-serif;
+	display: inline;
+	padding-bottom: 0;
+	vertical-align: unset;
+}
+
+.custom-swagger-ui #main-content .parameters-col_description p,
+.custom-swagger-ui #main-content .response-col_description p {
+	margin-top: 0;
+}
+
+.custom-swagger-ui #main-content .parameters-col_name div {
+	margin-right: 15px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .scheme-container {
+	box-shadow: 0px 1px 0px 0 rgba(0,0,0,.15);
+}

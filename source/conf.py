@@ -30,9 +30,10 @@ author = u'Wazuh, Inc.'
 copyright = u'&copy; ' + str(datetime.datetime.now().year) + u' &middot; Wazuh Inc.'
 
 # The short X.Y version
-version = '3.12'
+version = '4.0'
 # The full version, including alpha/beta/rc tags
 release = version
+apiURL = 'https://raw.githubusercontent.com/wazuh/wazuh/dev-aiohttp-poc/api/api/spec/spec.yaml'
 
 # -- General configuration ------------------------------------------------
 
@@ -45,7 +46,6 @@ release = version
 extensions = [
     'sphinx.ext.autodoc',
     'sphinxcontrib.images',
-    'sphinxprettysearchresults',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -432,7 +432,7 @@ custom_replacements = {
     "|WAZUH_REVISION_HPUX|" : "1",
     "|WAZUH_REVISION_OSX|" : "1",
     "|WAZUH_REVISION_WINDOWS|" : "1",
-}   
+}
 
 # -- Setup -------------------------------------------------------------------
 
@@ -479,5 +479,6 @@ html_context = {
     "github_repo": "wazuh-documentation",
     "conf_py_path": "/source/",
     "github_version": version,
-    "production": production
+    "production": production,
+    "apiURL": apiURL
 }
