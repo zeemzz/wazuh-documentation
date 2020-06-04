@@ -1,5 +1,238 @@
+.custom-swagger-ui #main-content .swagger-ui {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui pre,
+.custom-swagger-ui #main-content .swagger-ui code,
+.custom-swagger-ui #main-content .swagger-ui .code,
+.custom-swagger-ui #main-content .swagger-ui kbd,
+.custom-swagger-ui #main-content .swagger-ui samp {
+	font-family: "Fira Mono", monospace;
+}
+
+.custom-swagger-ui #main-content .swagger-ui button,
+.custom-swagger-ui #main-content .swagger-ui input,
+.custom-swagger-ui #main-content .swagger-ui optgroup,
+.custom-swagger-ui #main-content .swagger-ui select,
+.custom-swagger-ui #main-content .swagger-ui textarea {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.2;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .parameter__type {
+	font-family: "Fira Mono", monospace;
+	font-weight: 400;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock-tag small {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock .opblock-section-header>label {
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock-tag {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock .opblock-summary-method {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock .opblock-summary-operation-id,
+.custom-swagger-ui #main-content .swagger-ui .opblock .opblock-summary-path,
+.custom-swagger-ui #main-content .swagger-ui .opblock .opblock-summary-path__deprecated {
+	font-family: "Fira Mono", monospace;
+	font-weight: 400;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock .opblock-summary-description {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .tab li {
+	font-size: 0.9rem;
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock-description-wrapper,
+.custom-swagger-ui #main-content .swagger-ui .opblock-external-docs-wrapper,
+.custom-swagger-ui #main-content .swagger-ui .opblock-title_normal {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock-description-wrapper p,
+.custom-swagger-ui #main-content .swagger-ui .opblock-external-docs-wrapper p,
+.custom-swagger-ui #main-content .swagger-ui .opblock-title_normal p {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .responses-inner h4,
+.custom-swagger-ui #main-content .swagger-ui .responses-inner h5 {
+	font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .response-col_status {
+	font-size: 0.9rem;
+	font-family: 'Open Sans', sans-serif;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .response-col_status .response-undocumented {
+	font-size: .9em;
+	font-family: "Fira Mono", monospace;
+	font-weight: 600;
+	color: #909090
+}
+
+.custom-swagger-ui #main-content .swagger-ui pre.microlight {
+	font-size: 0.95rem;
+	font-family: "Fira Mono", monospace;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.custom-swagger-ui #main-content .swagger-ui select,
+.custom-swagger-ui #main-content .swagger-ui .btn {
+	font-weight: 400;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .btn {
+	max-width: 200px;
+}
+
+.custom-swagger-ui #main-content .btn-group,
+.custom-swagger-ui #main-content .execute-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.custom-swagger-ui #main-content .swagger-ui select {
+	border-width: 1px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .checkbox p,
+.custom-swagger-ui #main-content .swagger-ui textarea {
+	font-size: 0.9rem;
+	font-family: "Fira Mono", monospace;
+	font-weight: 400;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .dialog-ux .modal-ux-header h3 {
+	font-size: 23px;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .parameter__name {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .modal-ux-inner .auth-container h6 {
+	margin-left: 10px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .auth-container .errors {
+	font-family: "Fira Mono", monospace;
+	font-weight: 400;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .model,
+.custom-swagger-ui #main-content .swagger-ui .model p {
+	font-size: 0.9rem;
+	font-weight: 400;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .model {
+	font-family: "Fira Mono", monospace;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .model-title {
+	font-size: 0.9rem;
+	font-family: 'Open Sans', sans-serif;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .model-toggle {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	margin: 2px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .parameter__deprecated,
+.custom-swagger-ui #main-content .swagger-ui .parameter__extension,
+.custom-swagger-ui #main-content .swagger-ui .parameter__in {
+	font-family: "Fira Mono", monospace;
+	font-size: 0.8rem;
+	font-weight: 500;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .scopes h2 {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .errors-wrapper .errors h4 {
+	font-family: "Fira Mono", monospace;
+	font-weight: 600;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .errors-wrapper hgroup h4 {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .markdown pre,
+.custom-swagger-ui #main-content .swagger-ui .renderedMarkdown pre {
+	color: #000;
+	font-weight: 400;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .markdown code,
+.custom-swagger-ui #main-content .swagger-ui .renderedMarkdown code {
+	font-size: 0.9rem;
+	font-family: "Fira Mono", monospace;
+	font-weight: 400;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .response-control-examples__title,
+.custom-swagger-ui #main-content .swagger-ui .response-control-media-type__title {
+	margin-bottom: .2rem;
+	font-size: .8rem;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .response-control-media-type__accept-message,
+.custom-swagger-ui #main-content .swagger-ui code {
+	font-size: .8rem;
+}
+
 .custom-swagger-ui #main-content .version::after {
 	content: "";
+}
+
+.custom-swagger-ui #main-content .information-container.wrapper,
+.custom-swagger-ui #main-content .servers-title,
+.custom-swagger-ui #main-content .servers > label {
+	display: none;
 }
 
 .custom-swagger-ui #main-content .version {
@@ -10,7 +243,8 @@
 	padding: 0;
 }
 
-.custom-swagger-ui #main-content .information-container .block {
+.custom-swagger-ui #main-content .information-container .block,
+.custom-swagger-ui #main-content .block-desktop.block {
 	padding: 0;
 }
 
@@ -43,7 +277,6 @@
 	color: #008000;
 	border: none;
 	background: none;
-	font-family: sans-serif;
 	display: inline;
 	padding-bottom: 0;
 	vertical-align: unset;
@@ -60,4 +293,78 @@
 
 .custom-swagger-ui #main-content .swagger-ui .scheme-container {
 	box-shadow: 0px 1px 0px 0 rgba(0,0,0,.15);
+	margin: 0 0 5px;
+	padding-top: 0;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .auth-btn-wrapper {
+  justify-content: flex-end;
+}
+
+.custom-swagger-ui #main-content .swagger-ui button {
+	height: fit-content;
+  margin: 10px;
+	font-size: 1em;
+	line-height: 1.2;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .modal-dialog-ux .auth-container label {
+	display: block;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .modal-dialog-ux .auth-container .wrapper code {
+	display: inline-block;
+}
+
+
+.custom-swagger-ui #main-content .swagger-ui .modal-dialog-ux .auth-container .wrapper p,
+.custom-swagger-ui #main-content .swagger-ui .modal-dialog-ux .auth-container .wrapper code {
+	margin: 0 0 .5rem 0;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .modal-dialog-ux .auth-container .wrapper code {
+  padding: .79rem;
+  margin: .3rem 0;
+}
+
+.custom-swagger-ui #main-content .swagger-ui,
+.custom-swagger-ui #main-content .swagger-ui p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.9rem;
+}
+
+.custom-swagger-ui #main-content h3,
+.custom-swagger-ui #main-content h4 {
+	font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #333333;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.custom-swagger-ui #main-content .models h4 {
+	font-size: 20px;
+	background-color: #f4f4f4;
+}
+
+.custom-swagger-ui #main-content table.model {
+  margin: 5px 0;
+}
+
+.custom-swagger-ui #main-content h4 a.nostyle {
+	font-size: 20px;
+}
+
+.custom-swagger-ui #main-content h4 > svg {
+	margin: 10px;
+	width: 30px;
+  height: 20px;
+  padding: 0px 5px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui table tr td,
+.custom-swagger-ui #main-content .swagger-ui table tr th {
+	font-family: 'Open Sans', sans-serif;
+	font-size: .9rem;
+	min-width: 110px;
 }
