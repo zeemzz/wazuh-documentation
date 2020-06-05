@@ -292,9 +292,10 @@
 }
 
 .custom-swagger-ui #main-content .swagger-ui .scheme-container {
-	box-shadow: 0px 1px 0px 0 rgba(0,0,0,.15);
 	margin: 0 0 5px;
 	padding-top: 0;
+	border-bottom: 1px solid #00000026;
+	box-shadow: none;
 }
 
 .custom-swagger-ui #main-content .swagger-ui .auth-btn-wrapper {
@@ -373,4 +374,148 @@
 	font-family: 'Open Sans', sans-serif;
 	font-size: .9rem;
 	min-width: 110px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .servers table tr td {
+	min-width: 90px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .response-col_description {
+	max-width: 320px;
+}
+
+@media (max-width: 499px) {
+	.custom-swagger-ui #main-content .swagger-ui .scheme-container .schemes {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .auth-wrapper {
+    margin-left: auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag {
+		flex-direction: column;
+		position: relative;
+		min-height: 92px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag button.expand-operation {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		height: auto;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag > a {
+		width: 100%;
+    padding: 0 20px 0 0;
+		border: none;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag > small {
+		width: 100%;
+    padding: 0 20px 0 0;
+		flex: none;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag > small p {
+		margin: .2rem 0;
+	}
+	.custom-swagger-ui #main-content .swagger-ui section.models h4 {
+		padding: 10px 0px 10px 20px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary	{
+		flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 42px 10px 10px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary .opblock-summary-method {
+		position: absolute;
+		top: 3px;
+		left: 3px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary button.authorization__btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+    margin-right: 0;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary-path {
+		font-size: 0.9rem;
+		padding: 0;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .parameters-container {
+		padding:20px 20px 0 20px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .table-container {
+    padding: 0 0 20px 0;
+    overflow: auto;
+	}
+
+	.custom-swagger-ui #main-content table {
+		margin-right: 20px;
+		width: 100%;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui input[type=email],
+	.custom-swagger-ui #main-content .swagger-ui input[type=file],
+	.custom-swagger-ui #main-content .swagger-ui input[type=password],
+	.custom-swagger-ui #main-content .swagger-ui input[type=search],
+	.custom-swagger-ui #main-content .swagger-ui input[type=text],
+	.custom-swagger-ui #main-content .swagger-ui textarea {
+		max-width: 100%;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui div::not(.servers) table tr td,
+	.custom-swagger-ui #main-content .swagger-ui table tr th {
+		min-width: 100px;
+		max-width: 300px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .responses-wrapper .responses-inner,
+	.custom-swagger-ui #main-content .swagger-ui .models .model-container {
+		overflow: auto;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .models .model-container > .model-box > .model-box {
+    margin-right: 30px;
+    width: 100%;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .models .model-container .table-responsive {
+		overflow: unset;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .model-example > div > .model-box {
+		overflow: auto;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .model-example {
+		width: 100%;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui table .model-example {
+		width: calc(100% - 30px);
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .highlight-code,
+	.custom-swagger-ui #main-content .swagger-ui table .model-box {
+		width: 100%;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui pre.microlight {
+		white-space: pre;
+		width: 100%;
+	}
 }
