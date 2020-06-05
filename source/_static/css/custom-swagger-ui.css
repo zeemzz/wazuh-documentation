@@ -351,6 +351,12 @@
   margin: 5px 0;
 }
 
+.custom-swagger-ui #main-content table .model > span > span[style="cursor: pointer;"] .model-toggle {
+  vertical-align: top;
+  position: relative;
+  top: -2px;
+}
+
 .custom-swagger-ui #main-content h4 a.nostyle {
 	font-size: 20px;
 }
