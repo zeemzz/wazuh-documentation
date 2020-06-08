@@ -174,7 +174,18 @@
 	width: 20px;
 	height: 20px;
 	display: inline-block;
-	margin: 2px;
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 3px;
+  box-shadow: 0px 0px 4px #595959;
+	margin: 3px 1px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .model-toggle:hover {
+	box-shadow: 0px 0px 2px #595959;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .model span[style="cursor: pointer;"] {
+	margin: 2px 4px 2px 8px;
 }
 
 .custom-swagger-ui #main-content .swagger-ui .parameter__deprecated,
@@ -318,13 +329,12 @@
 }
 
 
-.custom-swagger-ui #main-content .swagger-ui .modal-dialog-ux .auth-container .wrapper p,
-.custom-swagger-ui #main-content .swagger-ui .modal-dialog-ux .auth-container .wrapper code {
+.custom-swagger-ui #main-content .swagger-ui .modal-dialog-ux .auth-container .wrapper p {
 	margin: 0 0 .5rem 0;
 }
 
 .custom-swagger-ui #main-content .swagger-ui .modal-dialog-ux .auth-container .wrapper code {
-  padding: .79rem;
+  padding: 0.5rem;
   margin: .3rem 0;
 }
 
@@ -349,13 +359,13 @@
 }
 
 .custom-swagger-ui #main-content table.model {
-  margin: 5px 0;
+  margin: 0.8rem 0;
 }
 
 .custom-swagger-ui #main-content table .model > span > span[style="cursor: pointer;"] .model-toggle {
   vertical-align: top;
   position: relative;
-  top: -2px;
+  top: -3px;
 }
 
 .custom-swagger-ui #main-content h4 a.nostyle {
@@ -384,6 +394,44 @@
 	max-width: 320px;
 }
 
+.custom-swagger-ui #main-content .swagger-ui table tr td.response-col_links {
+  min-width: 70px;
+  padding-left: 10px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui table tr td.response-col_status {
+  min-width: 55px;
+  padding-right: 10px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui table .model-example {
+	width: fit-content;
+	max-width: 100%;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .model-example > div > .model-box {
+	max-width: 100%;
+	overflow: auto;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock-description-wrapper .model-example {
+	max-width: 100%;
+	width: fit-content;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .models .model-container {
+	overflow: auto;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .models .model-container .table-responsive {
+	overflow: unset;
+}
+
+.custom-swagger-ui #main-content .swagger-ui pre.microlight {
+	white-space: pre;
+	max-width: 100%;
+}
+
 @media (max-width: 499px) {
 	.custom-swagger-ui #main-content .swagger-ui .scheme-container .schemes {
 		flex-direction: column;
@@ -392,41 +440,6 @@
 
 	.custom-swagger-ui #main-content .swagger-ui .auth-wrapper {
     margin-left: auto;
-	}
-}
-
-@media (max-width: 767px) {
-	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag {
-		flex-direction: column;
-		position: relative;
-		min-height: 92px;
-	}
-
-	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag button.expand-operation {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		height: auto;
-	}
-
-	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag > a {
-		width: 100%;
-    padding: 0 20px 0 0;
-		border: none;
-	}
-
-	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag > small {
-		width: 100%;
-    padding: 0 20px 0 0;
-		flex: none;
-	}
-
-	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag > small p {
-		margin: .2rem 0;
-	}
-	.custom-swagger-ui #main-content .swagger-ui section.models h4 {
-		padding: 10px 0px 10px 20px;
 	}
 
 	.custom-swagger-ui #main-content .swagger-ui .opblock-summary	{
@@ -454,6 +467,77 @@
 		padding: 0;
 	}
 
+	.custom-swagger-ui #main-content .swagger-ui table td.response-col_description {
+		max-width: 240px;
+	}
+}
+
+@media (min-width: 500px) and (max-width: 767px),
+(min-width: 992px) and (max-width: 1199px) {
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary	{
+		flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 10px 42px 10px 100px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary .opblock-summary-method {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 10px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary button.authorization__btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-100%);
+		right: 0;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary-path {
+		font-size: 0.9rem;
+		padding: 0;
+	}
+}
+
+@media (max-width: 768px),
+(min-width: 992px) and (max-width: 1199px) {
+	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag {
+		flex-direction: column;
+		position: relative;
+		min-height: 92px;
+		justify-content: center;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag button.expand-operation {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		height: auto;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag > a {
+		width: 100%;
+    padding: 0 20px 0 0;
+		border: none;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag > small {
+		width: 100%;
+    padding: 0 20px 0 0;
+		flex: none;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag > small p {
+		margin: .2rem 0;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui section.models h4 {
+		padding: 10px 0px 10px 20px;
+	}
+
 	.custom-swagger-ui #main-content .swagger-ui .parameters-container {
 		padding:20px 20px 0 20px;
 	}
@@ -464,58 +548,18 @@
 	}
 
 	.custom-swagger-ui #main-content table {
-		margin-right: 20px;
 		width: 100%;
 	}
 
-	.custom-swagger-ui #main-content .swagger-ui input[type=email],
-	.custom-swagger-ui #main-content .swagger-ui input[type=file],
-	.custom-swagger-ui #main-content .swagger-ui input[type=password],
-	.custom-swagger-ui #main-content .swagger-ui input[type=search],
-	.custom-swagger-ui #main-content .swagger-ui input[type=text],
 	.custom-swagger-ui #main-content .swagger-ui textarea {
 		max-width: 100%;
 	}
 
-	.custom-swagger-ui #main-content .swagger-ui div::not(.servers) table tr td,
-	.custom-swagger-ui #main-content .swagger-ui table tr th {
-		min-width: 100px;
-		max-width: 300px;
-	}
-
-	.custom-swagger-ui #main-content .swagger-ui .responses-wrapper .responses-inner,
-	.custom-swagger-ui #main-content .swagger-ui .models .model-container {
+	.custom-swagger-ui #main-content .swagger-ui .responses-wrapper .responses-inner {
 		overflow: auto;
 	}
 
-	.custom-swagger-ui #main-content .swagger-ui .models .model-container > .model-box > .model-box {
-    margin-right: 30px;
-    width: 100%;
-	}
-
-	.custom-swagger-ui #main-content .swagger-ui .models .model-container .table-responsive {
-		overflow: unset;
-	}
-
-	.custom-swagger-ui #main-content .swagger-ui .model-example > div > .model-box {
-		overflow: auto;
-	}
-
-	.custom-swagger-ui #main-content .swagger-ui .model-example {
-		width: 100%;
-	}
-
-	.custom-swagger-ui #main-content .swagger-ui table .model-example {
-		width: calc(100% - 30px);
-	}
-
-	.custom-swagger-ui #main-content .swagger-ui .highlight-code,
-	.custom-swagger-ui #main-content .swagger-ui table .model-box {
-		width: 100%;
-	}
-
-	.custom-swagger-ui #main-content .swagger-ui pre.microlight {
-		white-space: pre;
-		width: 100%;
+	.custom-swagger-ui #main-content .swagger-ui .models .model-box {
+    white-space: nowrap;
 	}
 }
