@@ -233,6 +233,9 @@
       {%- for scriptfile in script_files %}
         {{ js_tag(scriptfile) }}
       {%- endfor %}
+      {% if pagename == 'user-manual/api/reference' %}
+        <script src="{{ pathto('_static/js/custom-swagger-ui.js', 1) }}"> </script>
+      {% endif %}
     {% else %}
       <script type="text/javascript">
           var DOCUMENTATION_OPTIONS = {
