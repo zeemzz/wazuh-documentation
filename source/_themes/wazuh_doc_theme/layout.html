@@ -36,9 +36,9 @@
 {% block head %}
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="author" content="Wazuh" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   {{- metatags }}
 
@@ -107,8 +107,8 @@
   {% endif %}
 
   {% if pagename == 'user-manual/api/reference' %}
-    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/swagger-ui.css', 1) }}">
-    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/custom-swagger-ui.css', 1) }}">
+    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/swagger-ui.css', 1) }}" />
+    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/custom-swagger-ui.css', 1) }}" />
   {% endif %}
 
 </head>
@@ -217,12 +217,9 @@
 
         </div>
 
-
-        {% if pagename != 'user-manual/api/reference' %}
       </div>
 
     </section>
-    {% endif %}
 
   </div> <!-- // #page -->
   {# Footer's scripts #}
