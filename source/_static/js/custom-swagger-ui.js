@@ -2,6 +2,7 @@ jQuery(function($) {
   // hash => agents+get_agent_upgrade
   // id   => operations-agents-api\.controllers\.agents_controller\.get_agent_upgrade
   const hash = window.location.href.split('#')[1] || '';
+  const idSeparator = '-dot-';
 
   init(hash);
 
@@ -37,10 +38,8 @@ jQuery(function($) {
         }
       }
     };
-    if ( hash.length > 0) {
-      swaggerObserver = new MutationObserver(swaggerLoaded);
-      swaggerObserver.observe($('main #swagger-ui')[0], config);
-    }
+    swaggerObserver = new MutationObserver(swaggerLoaded);
+    swaggerObserver.observe($('main #swagger-ui')[0], config);
   }
 
   /**
@@ -51,13 +50,20 @@ jQuery(function($) {
     */
   function observeTagSection(params, tag, config) {
     let operationObserver = null;
-    // console.log($('#operations-tag-'+tag).parent()[0]);
     const operationLoaded = function(mutationsList, observer) {
       for (i = 0; i < mutationsList.length; i++) {
         if ( mutationsList[i].type === 'childList' && $(mutationsList[i].addedNodes[0]).find('.opblock').length > 0 ) {
           // When operation block is finally loaded:
           $(mutationsList[i].addedNodes[0]).find('.opblock').each(function() {
-            $(this).attr('id', $(this).attr('id').replace(/\\\./g, '-dot-'));
+            // Fix IDs
+            $(this).attr('id', $(this).attr('id').replace(/\\\./g, idSeparator));
+            // Add endpoint link
+            const newHash = idToHash($(this).attr('id'));
+            $(this).children('.opblock-summary').append('<a class="headerlink" href="#' + newHash.hash + '" title="Permalink to this headline">¶</a>');
+            $(this).find('a.headerlink').on('click', function(e) {
+              e.stopPropagation();
+              $('html, body').scrollTop($('#'+newHash.id).offset().top);
+            });
           });
           scrollToEndpoint(params.id);
         }
@@ -91,11 +97,27 @@ jQuery(function($) {
     if ( hash.length > 0) {
       [result.operation, result.endpoint] = hash.split('+');
       if ( result.endpoint != undefined ) {
-        result.id = 'operations-' + result.operation + '-api-dot-controllers-dot-' + result.operation + '_controller-dot-' + result.endpoint;
+        result.id = 'operations-' + result.operation + '-api' + idSeparator + 'controllers' + idSeparator + result.operation + '_controller' + idSeparator + result.endpoint;
       } else {
         result.id = hash;
       }
     }
+    return result;
+  }
+
+  /**
+    * Extract the information from the endpoint id
+    * @param {string} id ID attribute for the endpoint
+    * @return {object} Object containing the sturecured information extracted from the id
+    */
+  function idToHash(id) {
+    const result = {};
+    const extactingTemp = id.split(idSeparator);
+    result.id = id;
+    result.endpoint = extactingTemp[extactingTemp.length - 1];
+    result.operation = extactingTemp[0].split('-')[1];
+    result.hash = result.operation + '+' + result.endpoint;
+
     return result;
   }
 });

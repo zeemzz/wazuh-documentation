@@ -3,6 +3,22 @@
 	color: #333333;
 }
 
+.custom-swagger-ui #main-content .swagger-ui a.headerlink {
+	align-self: flex-end;
+	display: inline-flex;
+	transition: none;
+}
+
+.custom-swagger-ui #main-content .swagger-ui a.headerlink:hover,
+.custom-swagger-ui #main-content .swagger-ui a.headerlink:focus {
+	border: none;
+}
+
+.custom-swagger-ui #main-content .swagger-ui a.headerlink::before {
+	padding-bottom: 0;
+	color: #99938C;
+}
+
 .custom-swagger-ui #main-content .swagger-ui pre,
 .custom-swagger-ui #main-content .swagger-ui code,
 .custom-swagger-ui #main-content .swagger-ui .code,
@@ -458,8 +474,15 @@
 	.custom-swagger-ui #main-content .swagger-ui .opblock-summary button.authorization__btn {
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: 40px;
     margin-right: 0;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui a.headerlink {
+		position: absolute;
+		display: block;
+		right: 5px;
+		top: 0.6rem;
 	}
 
 	.custom-swagger-ui #main-content .swagger-ui .opblock-summary-path {
@@ -478,7 +501,7 @@
 		flex-direction: column;
     align-items: flex-start;
     position: relative;
-    padding: 10px 42px 10px 100px;
+    padding: 10px 75px 10px 100px;
 	}
 
 	.custom-swagger-ui #main-content .swagger-ui .opblock-summary .opblock-summary-method {
@@ -492,7 +515,15 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-100%);
-		right: 0;
+		right: 30px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui a.headerlink {
+		position: absolute;
+		display: block;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 
 	.custom-swagger-ui #main-content .swagger-ui .opblock-summary-path {
