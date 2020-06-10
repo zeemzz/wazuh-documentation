@@ -26,9 +26,16 @@ jQuery(function($) {
             $('.opblock-tag').each(function() {
               const currentTag = $(this).data('tag');
               tags.push(currentTag);
-              // $(this).on('click', function(){
-              // window.location.hash = currentTag;
-              // });
+              $(this).on('click', function(e) {
+                if ( !$(this).parent().hasClass('is-open') ) {
+                  const newHash = {};
+                  newHash.id = $(this).attr('id');
+                  newHash.hash = $(this).data('tag');
+                  window.location.hash = newHash.hash;
+                  $('html, body').scrollTop($('#'+newHash.id).offset().top);
+                  $('html, body').scrollTop();
+                }
+              });
               observeTagSection(params, currentTag, config );
             });
 
@@ -115,7 +122,7 @@ jQuery(function($) {
     const extactingTemp = id.split(idSeparator);
     result.id = id;
     result.endpoint = extactingTemp[extactingTemp.length - 1];
-    result.operation = extactingTemp[0].split('-')[1];
+    result.operation = extactingTemp[0].replace('operations-', '').replace('-api', '');
     result.hash = result.operation + '+' + result.endpoint;
 
     return result;
