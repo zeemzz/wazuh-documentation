@@ -7,6 +7,8 @@
 	align-self: flex-end;
 	display: inline-flex;
 	transition: none;
+	width:40px;
+	height:40px;
 }
 
 .custom-swagger-ui #main-content .swagger-ui a.headerlink:hover,
@@ -17,6 +19,7 @@
 .custom-swagger-ui #main-content .swagger-ui a.headerlink::before {
 	padding-bottom: 0;
 	color: #99938C;
+	align-self: center;
 }
 
 .custom-swagger-ui #main-content .swagger-ui pre,
@@ -474,15 +477,14 @@
 	.custom-swagger-ui #main-content .swagger-ui .opblock-summary button.authorization__btn {
 		position: absolute;
 		top: 0;
-		right: 40px;
+		right: 45px;
     margin-right: 0;
 	}
 
 	.custom-swagger-ui #main-content .swagger-ui a.headerlink {
 		position: absolute;
-		display: block;
 		right: 5px;
-		top: 0.6rem;
+		top: 0;
 	}
 
 	.custom-swagger-ui #main-content .swagger-ui .opblock-summary-path {
@@ -515,13 +517,12 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-100%);
-		right: 30px;
+		right: 35px;
 	}
 
 	.custom-swagger-ui #main-content .swagger-ui a.headerlink {
 		position: absolute;
-		display: block;
-		right: 10px;
+		right: 0;
 		top: 50%;
 		transform: translateY(-50%);
 	}
