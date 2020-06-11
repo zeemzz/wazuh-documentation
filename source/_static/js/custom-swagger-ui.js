@@ -45,10 +45,9 @@ function observeTagSection(params, tagSection, config, idSeparator) {
       if ( mutationsList[i].type === 'childList' && $(mutationsList[i].addedNodes[0]).find('.opblock').length > 0 ) {
         // When operation block is finally loaded:
         $(mutationsList[i].addedNodes[0]).find('.opblock').each(function() {
-          // Fix IDs
-          $(this).attr('id', $(this).attr('id').replace(/\\\./g, idSeparator));
-          // Add endpoint link
+          // Fix IDs and add endpoint link
           const newHash = idToHash($(this).attr('id'), idSeparator);
+          $(this).attr('id', newHash.id);
           if ( $(this).find('a.headerlink').length == 0 ) {
             $(this).children('.opblock-summary').append('<a class="headerlink" href="#' + newHash.hash + '" title="Permalink to this headline">¶</a>');
           }
@@ -91,9 +90,10 @@ function observeTagSection(params, tagSection, config, idSeparator) {
 */
 function firstLoadedEnpoint(params, config) {
   let tagSectionObserver = null;
+  params = hashToId(params.hash, params.idSeparator);
   const endpointsLoaded = function(mutationsList, observer) {
     for (i = 0; i < mutationsList.length; i++) {
-      if ( mutationsList[i].type === 'childList' ) {
+      if ( mutationsList[i].type === 'childList') {
         const headerHeight = getHeaderHeight();
         $('html, body').scrollTop($('#'+params.id).offset().top - headerHeight*2 );
       }
@@ -107,16 +107,22 @@ function firstLoadedEnpoint(params, config) {
 /**
 * Extract the information from the hash
 * @param {string} hash String that contains the information to scroll to an element
-* @return {object} Object containing the sturecured information extracted from the hash
+* @return {object} Object containing the structured information extracted from the hash
 * @param {string} idSeparator Short string acting as proper separator (instead of '.' or '\.')
 */
 function hashToId(hash, idSeparator) {
   const result = {};
+  result.idSeparator = idSeparator;
   result.hash = hash;
   if ( hash.length > 0) {
     [result.operation, result.endpoint] = hash.split('+');
     if ( result.endpoint != undefined ) {
-      result.id = 'operations-' + result.operation + '-api' + idSeparator + 'controllers' + idSeparator + result.operation + '_controller' + idSeparator + result.endpoint;
+      $('.opblock').each(function() {
+        if ( $(this).attr('id').match('operations-' + result.operation + '-api')
+        && $(this).attr('id').match(result.endpoint) ) {
+          result.id = idToHash($(this).attr('id'), idSeparator).id;
+        }
+      });
     } else {
       result.id = hash;
     }
@@ -127,16 +133,19 @@ function hashToId(hash, idSeparator) {
 /**
 * Extract the information from the endpoint id
 * @param {string} id ID attribute for the endpoint
-* @return {object} Object containing the sturecured information extracted from the id
 * @param {string} idSeparator Short string acting as proper separator (instead of '.' or '\.')
+* @return {object} Object containing the sturecured information extracted from the id
 */
 function idToHash(id, idSeparator) {
   const result = {};
-  const extactingTemp = id.split(idSeparator);
-  result.id = id;
+  result.idSeparator = idSeparator;
+  result.id = id.replace(/\\\./g, idSeparator);
+  const extactingTemp = result.id.split(idSeparator);
   result.endpoint = extactingTemp[extactingTemp.length - 1];
   result.operation = extactingTemp[0].replace('operations-', '').replace('-api', '');
   result.hash = result.operation + '+' + result.endpoint;
+  // If operation composed name is written using '_' in the id the next line will fix it to use '-'
+  result.id = result.id.replace(result.operation.split('-').join('_'), result.operation);
 
   return result;
 }
