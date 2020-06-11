@@ -98,6 +98,8 @@ function firstLoadedEnpoint(params, config) {
         $('html, body').scrollTop($('#'+params.id).offset().top - headerHeight*2 );
       }
     }
+    tagSectionObserver.disconnect();
+    $('#'+params.id+ ' .opblock-summary').click();
   };
 
   tagSectionObserver = new MutationObserver(endpointsLoaded);
