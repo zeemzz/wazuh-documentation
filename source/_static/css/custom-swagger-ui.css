@@ -1,0 +1,597 @@
+.custom-swagger-ui #main-content .swagger-ui {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui a.headerlink {
+	align-self: flex-end;
+	display: inline-flex;
+	transition: none;
+	width:40px;
+	height:40px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui a.headerlink:hover,
+.custom-swagger-ui #main-content .swagger-ui a.headerlink:focus {
+	border: none;
+}
+
+.custom-swagger-ui #main-content .swagger-ui a.headerlink::before {
+	padding-bottom: 0;
+	color: #99938C;
+	align-self: center;
+}
+
+.custom-swagger-ui #main-content .swagger-ui pre,
+.custom-swagger-ui #main-content .swagger-ui code,
+.custom-swagger-ui #main-content .swagger-ui .code,
+.custom-swagger-ui #main-content .swagger-ui kbd,
+.custom-swagger-ui #main-content .swagger-ui samp {
+	font-family: "Fira Mono", monospace;
+}
+
+.custom-swagger-ui #main-content .swagger-ui button,
+.custom-swagger-ui #main-content .swagger-ui input,
+.custom-swagger-ui #main-content .swagger-ui optgroup,
+.custom-swagger-ui #main-content .swagger-ui select,
+.custom-swagger-ui #main-content .swagger-ui textarea {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.2;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .parameter__type {
+	font-family: "Fira Mono", monospace;
+	font-weight: 400;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock-tag small {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock .opblock-section-header>label {
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock-tag {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock .opblock-summary-method {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock .opblock-summary-operation-id,
+.custom-swagger-ui #main-content .swagger-ui .opblock .opblock-summary-path,
+.custom-swagger-ui #main-content .swagger-ui .opblock .opblock-summary-path__deprecated {
+	font-family: "Fira Mono", monospace;
+	font-weight: 400;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock .opblock-summary-description {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .tab li {
+	font-size: 0.9rem;
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock-description-wrapper,
+.custom-swagger-ui #main-content .swagger-ui .opblock-external-docs-wrapper,
+.custom-swagger-ui #main-content .swagger-ui .opblock-title_normal {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock-description-wrapper p,
+.custom-swagger-ui #main-content .swagger-ui .opblock-external-docs-wrapper p,
+.custom-swagger-ui #main-content .swagger-ui .opblock-title_normal p {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .responses-inner h4,
+.custom-swagger-ui #main-content .swagger-ui .responses-inner h5 {
+	font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .response-col_status {
+	font-size: 0.9rem;
+	font-family: 'Open Sans', sans-serif;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .response-col_status .response-undocumented {
+	font-size: .9em;
+	font-family: "Fira Mono", monospace;
+	font-weight: 600;
+	color: #909090
+}
+
+.custom-swagger-ui #main-content .swagger-ui pre.microlight {
+	font-size: 0.95rem;
+	font-family: "Fira Mono", monospace;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.custom-swagger-ui #main-content .swagger-ui select,
+.custom-swagger-ui #main-content .swagger-ui .btn {
+	font-weight: 400;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .btn {
+	max-width: 200px;
+}
+
+.custom-swagger-ui #main-content .btn-group,
+.custom-swagger-ui #main-content .execute-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.custom-swagger-ui #main-content .swagger-ui select {
+	border-width: 1px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .checkbox p,
+.custom-swagger-ui #main-content .swagger-ui textarea {
+	font-size: 0.9rem;
+	font-family: "Fira Mono", monospace;
+	font-weight: 400;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .dialog-ux .modal-ux-header h3 {
+	font-size: 23px;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .parameter__name {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .modal-ux-inner .auth-container h6 {
+	margin-left: 10px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .auth-container .errors {
+	font-family: "Fira Mono", monospace;
+	font-weight: 400;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .model,
+.custom-swagger-ui #main-content .swagger-ui .model p {
+	font-size: 0.9rem;
+	font-weight: 400;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .model {
+	font-family: "Fira Mono", monospace;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .model-title {
+	font-size: 0.9rem;
+	font-family: 'Open Sans', sans-serif;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .model-toggle {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 3px;
+  box-shadow: 0px 0px 4px #595959;
+	margin: 3px 1px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .model-toggle:hover {
+	box-shadow: 0px 0px 2px #595959;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .model span[style="cursor: pointer;"] {
+	margin: 2px 4px 2px 8px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .parameter__deprecated,
+.custom-swagger-ui #main-content .swagger-ui .parameter__extension,
+.custom-swagger-ui #main-content .swagger-ui .parameter__in {
+	font-family: "Fira Mono", monospace;
+	font-size: 0.8rem;
+	font-weight: 500;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .scopes h2 {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .errors-wrapper .errors h4 {
+	font-family: "Fira Mono", monospace;
+	font-weight: 600;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .errors-wrapper hgroup h4 {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333
+}
+
+.custom-swagger-ui #main-content .swagger-ui .markdown pre,
+.custom-swagger-ui #main-content .swagger-ui .renderedMarkdown pre {
+	color: #000;
+	font-weight: 400;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .markdown code,
+.custom-swagger-ui #main-content .swagger-ui .renderedMarkdown code {
+	font-size: 0.9rem;
+	font-family: "Fira Mono", monospace;
+	font-weight: 400;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .response-control-examples__title,
+.custom-swagger-ui #main-content .swagger-ui .response-control-media-type__title {
+	margin-bottom: .2rem;
+	font-size: .8rem;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .response-control-media-type__accept-message,
+.custom-swagger-ui #main-content .swagger-ui code {
+	font-size: .8rem;
+}
+
+.custom-swagger-ui #main-content .version::after {
+	content: "";
+}
+
+.custom-swagger-ui #main-content .information-container.wrapper,
+.custom-swagger-ui #main-content .servers-title,
+.custom-swagger-ui #main-content .servers > label {
+	display: none;
+}
+
+.custom-swagger-ui #main-content .version {
+	padding: 2px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .wrapper {
+	padding: 0;
+}
+
+.custom-swagger-ui #main-content .information-container .block,
+.custom-swagger-ui #main-content .block-desktop.block {
+	padding: 0;
+}
+
+.custom-swagger-ui #main-content table {
+  margin-bottom: 0;
+	border: none;
+}
+
+.custom-swagger-ui #main-content table tr:nth-child(2n+1) {
+  background: none;
+}
+
+.custom-swagger-ui #main-content table th:not(.col_header),
+.custom-swagger-ui #main-content table td {
+	border: none;
+}
+
+.custom-swagger-ui #main-content table th.col_header {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.custom-swagger-ui #main-content table th,
+.custom-swagger-ui #main-content table td {
+	background: none;
+}
+
+.custom-swagger-ui #main-content .response code {
+	color: #008000;
+	border: none;
+	background: none;
+	display: inline;
+	padding-bottom: 0;
+	vertical-align: unset;
+}
+
+.custom-swagger-ui #main-content .parameters-col_description p,
+.custom-swagger-ui #main-content .response-col_description p {
+	margin-top: 0;
+}
+
+.custom-swagger-ui #main-content .parameters-col_name div {
+	margin-right: 15px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .scheme-container {
+	margin: 0 0 5px;
+	padding-top: 0;
+	border-bottom: 1px solid #00000026;
+	box-shadow: none;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .auth-btn-wrapper {
+  justify-content: flex-end;
+}
+
+.custom-swagger-ui #main-content .swagger-ui button {
+	height: fit-content;
+  margin: 10px;
+	font-size: 1em;
+	line-height: 1.2;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .modal-dialog-ux .auth-container label {
+	display: block;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .modal-dialog-ux .auth-container .wrapper code {
+	display: inline-block;
+}
+
+
+.custom-swagger-ui #main-content .swagger-ui .modal-dialog-ux .auth-container .wrapper p {
+	margin: 0 0 .5rem 0;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .modal-dialog-ux .auth-container .wrapper code {
+  padding: 0.5rem;
+  margin: .3rem 0;
+}
+
+.custom-swagger-ui #main-content .swagger-ui,
+.custom-swagger-ui #main-content .swagger-ui p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.9rem;
+}
+
+.custom-swagger-ui #main-content h3,
+.custom-swagger-ui #main-content h4 {
+	font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #333333;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.custom-swagger-ui #main-content .models h4 {
+	font-size: 20px;
+	background-color: #f4f4f4;
+}
+
+.custom-swagger-ui #main-content table.model {
+  margin: 0.8rem 0;
+}
+
+.custom-swagger-ui #main-content table .model > span > span[style="cursor: pointer;"] .model-toggle {
+  vertical-align: top;
+  position: relative;
+  top: -3px;
+}
+
+.custom-swagger-ui #main-content h4 a.nostyle {
+	font-size: 20px;
+}
+
+.custom-swagger-ui #main-content h4 > svg {
+	margin: 10px;
+	width: 30px;
+  height: 20px;
+  padding: 0px 5px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui table tr td,
+.custom-swagger-ui #main-content .swagger-ui table tr th {
+	font-family: 'Open Sans', sans-serif;
+	font-size: .9rem;
+	min-width: 110px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .servers table tr td {
+	min-width: 90px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .response-col_description {
+	max-width: 320px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui table tr td.response-col_links {
+  min-width: 70px;
+  padding-left: 10px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui table tr td.response-col_status {
+  min-width: 55px;
+  padding-right: 10px;
+}
+
+.custom-swagger-ui #main-content .swagger-ui table .model-example {
+	width: fit-content;
+	max-width: 100%;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .model-example > div > .model-box {
+	max-width: 100%;
+	overflow: auto;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .opblock-description-wrapper .model-example {
+	max-width: 100%;
+	width: fit-content;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .models .model-container {
+	overflow: auto;
+}
+
+.custom-swagger-ui #main-content .swagger-ui .models .model-container .table-responsive {
+	overflow: unset;
+}
+
+.custom-swagger-ui #main-content .swagger-ui pre.microlight {
+	white-space: pre;
+	max-width: 100%;
+}
+
+@media (max-width: 499px) {
+	.custom-swagger-ui #main-content .swagger-ui .scheme-container .schemes {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .auth-wrapper {
+    margin-left: auto;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary	{
+		flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 42px 10px 10px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary .opblock-summary-method {
+		position: absolute;
+		top: 3px;
+		left: 3px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary button.authorization__btn {
+		position: absolute;
+		top: 0;
+		right: 45px;
+    margin-right: 0;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui a.headerlink {
+		position: absolute;
+		right: 5px;
+		top: 0;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary-path {
+		font-size: 0.9rem;
+		padding: 0;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui table td.response-col_description {
+		max-width: 240px;
+	}
+}
+
+@media (min-width: 500px) and (max-width: 767px),
+(min-width: 992px) and (max-width: 1199px) {
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary	{
+		flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 10px 75px 10px 100px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary .opblock-summary-method {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 10px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary button.authorization__btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-100%);
+		right: 35px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui a.headerlink {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .opblock-summary-path {
+		font-size: 0.9rem;
+		padding: 0;
+	}
+}
+
+@media (max-width: 768px),
+(min-width: 992px) and (max-width: 1199px) {
+	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag {
+		flex-direction: column;
+		position: relative;
+		min-height: 92px;
+		justify-content: center;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag button.expand-operation {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		height: auto;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag > a {
+		width: 100%;
+    padding: 0 20px 0 0;
+		border: none;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag > small {
+		width: 100%;
+    padding: 0 20px 0 0;
+		flex: none;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui h4.opblock-tag > small p {
+		margin: .2rem 0;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui section.models h4 {
+		padding: 10px 0px 10px 20px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .parameters-container {
+		padding:20px 20px 0 20px;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .table-container {
+    padding: 0 0 20px 0;
+    overflow: auto;
+	}
+
+	.custom-swagger-ui #main-content table {
+		width: 100%;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui textarea {
+		max-width: 100%;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .responses-wrapper .responses-inner {
+		overflow: auto;
+	}
+
+	.custom-swagger-ui #main-content .swagger-ui .models .model-box {
+    white-space: nowrap;
+	}
+}

@@ -36,9 +36,9 @@
 {% block head %}
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="author" content="Wazuh" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   {{- metatags }}
 
@@ -105,7 +105,12 @@
     ga('send', 'pageview');
   </script>
   {% endif %}
-  
+
+  {% if pagename == 'user-manual/api/reference' %}
+    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/swagger-ui.css', 1) }}" />
+    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/custom-swagger-ui.css', 1) }}" />
+  {% endif %}
+
 </head>
 {%- endblock head %}
 <body>
@@ -116,6 +121,8 @@
 
   {% if pagename == 'index' %}
   <div id="page" class="index">
+  {% elif pagename == 'user-manual/api/reference' %}
+  <div id="page" class="custom-swagger-ui">
   {% elif pagename == 'not_found' %}
   <div id="page" class="page-404 not-indexed">
   {% elif pagename == 'search' or pagename == 'genindex' %}
@@ -160,18 +167,23 @@
         <div id="main-content" class="order-1">
           <div id="rst-content">
 
-          {% if pagename != 'index' and pagename != 'not_found' and pagename != 'search' and pagename != 'genindex' %}
+          {% if pagename != 'index' and pagename != 'user-manual/api/reference' and pagename != 'not_found' and pagename != 'search' and pagename != 'genindex' %}
           <div class="edit-repo-wrapper">
             {% include "editrepo.html" %}
           </div>
+          {% endif %}
+          {% if pagename != 'index' and pagename != 'not_found' and pagename != 'search' and pagename != 'genindex' %}
           <div class="breadcrumbs-wrapper">
             {% include "breadcrumbs.html" %}
           </div>
           {% endif %}
 
           {# Main content #}
-          <main>
+          <main role="main">
             {% block body %} {% endblock %}
+            {% if pagename == 'user-manual/api/reference' %}
+              <div id="swagger-ui"></div>
+            {% endif %}
           </main>
 
           {% if pagename != 'index' %}
@@ -182,6 +194,26 @@
           <footer>
             {{copyright}}
           </footer>
+
+          {% if pagename == 'user-manual/api/reference' %}
+            <script src="{{ pathto('_static/js/swagger-ui-bundle.js', 1) }}"> </script>
+            <script src="{{ pathto('_static/js/swagger-ui-standalone-preset.js', 1) }}"> </script>
+            <script>
+            window.onload = function() {
+              const ui = SwaggerUIBundle({
+                url: '{{ apiURL }}',
+                dom_id: '#swagger-ui',
+                docExpansion: 'none',
+                presets: [
+                  SwaggerUIBundle.presets.apis,
+                  SwaggerUIStandalonePreset
+                ]
+              })
+
+              window.ui = ui
+            }
+            </script>
+          {% endif %}
 
         </div>
 
@@ -198,6 +230,9 @@
       {%- for scriptfile in script_files %}
         {{ js_tag(scriptfile) }}
       {%- endfor %}
+      {% if pagename == 'user-manual/api/reference' %}
+        <script src="{{ pathto('_static/js/custom-swagger-ui.js', 1) }}"> </script>
+      {% endif %}
     {% else %}
       <script type="text/javascript">
           var DOCUMENTATION_OPTIONS = {
