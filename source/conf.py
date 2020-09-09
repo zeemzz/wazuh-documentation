@@ -429,6 +429,7 @@ custom_replacements = {
     "|ELASTICSEARCH_LATEST_KUBERNETES|" : "7.6.2",
     "|ELASTICSEARCH_LATEST_PUPPET|" : "7.6.2",
     "|ELASTICSEARCH_LATEST_DOCKER|" : "7.8.0",
+    "|OPENDISTRO_LATEST_DOCKER|" : "1.9.0",
     "|SPLUNK_LATEST|" : "8.0.4",
     "|ELASTIC_6_LATEST|" : "6.8.8",
     "|WAZUH_REVISION_AIX|" : "1",
