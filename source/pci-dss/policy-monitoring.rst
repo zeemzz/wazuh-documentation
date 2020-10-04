@@ -54,8 +54,8 @@ In order to check SSH security settings and help meet requirement 2.2.4, we have
     <rootcheck>
         <rootkit_files>/var/ossec/etc/shared/rootkit_files.txt</rootkit_files>
         <rootkit_trojans>/var/ossec/etc/shared/rootkit_trojans.txt</rootkit_trojans>
-        <system_audit>/var/ossec/etc/shared/system_audit_rcl.txt<system_audit>
-        <system_audit>/var/ossec/etc/shared/ssh/system_audit_ssh.txt<system_audit>
+        <system_audit>/var/ossec/etc/shared/system_audit_rcl.txt</system_audit>
+        <system_audit>/var/ossec/etc/shared/ssh/system_audit_ssh.txt</system_audit>
     </rootcheck>
 
 If enabled, the file ``archives.log`` stores every log parsed by the Wazuh engine, whether it becomes an alert or not:
